@@ -20,10 +20,10 @@ import java.util.UUID;
 public class User {
 
     @Id
-    @SequenceGenerator(
-            name = "user_id_sequence",
-            sequenceName = "user_id_sequence"
-    )
+//    @SequenceGenerator(
+//            name = "user_id_sequence",
+//            sequenceName = "user_id_sequence"
+//    )
     private UUID id;
     private String firstName;
     private String lastName;

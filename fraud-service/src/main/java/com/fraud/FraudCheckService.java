@@ -18,6 +18,7 @@ public class FraudCheckService {
                         .userId(userId)
                         .isFraudster(false)
                         .timeStamp(Instant.now())
+                        .id(UUID.randomUUID())
                         .build()
         );
         return false;

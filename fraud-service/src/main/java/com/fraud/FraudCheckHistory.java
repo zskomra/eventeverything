@@ -19,10 +19,10 @@ import java.util.UUID;
 public class FraudCheckHistory {
 
     @Id
-    @SequenceGenerator(
-            name = "fraud_id_sequence",
-            sequenceName = "fraud_id_sequence"
-    )
+//    @SequenceGenerator(
+//            name = "fraud_id_sequence",
+//            sequenceName = "fraud_id_sequence"
+//    )
     private UUID id;
     private UUID userId;
     private Boolean isFraudster;
