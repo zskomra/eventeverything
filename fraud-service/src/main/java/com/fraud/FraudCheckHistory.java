@@ -1,4 +1,4 @@
-package com.registration;
+package com.fraud;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -8,25 +8,23 @@ import lombok.NoArgsConstructor;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
-import javax.persistence.Table;
+import java.time.Instant;
 import java.util.UUID;
 
 @Data
 @Builder
-@Entity
-@AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "users")
-public class User {
+@AllArgsConstructor
+@Entity
+public class FraudCheckHistory {
 
     @Id
     @SequenceGenerator(
-            name = "user_id_sequence",
-            sequenceName = "user_id_sequence"
+            name = "fraud_id_sequence",
+            sequenceName = "fraud_id_sequence"
     )
     private UUID id;
-    private String firstName;
-    private String lastName;
-    private String email;
-
+    private UUID userId;
+    private Boolean isFraudster;
+    private Instant timeStamp;
 }

@@ -1,3 +1,4 @@
 rootProject.name = 'eventeverything'
 include 'registration-service'
+include 'fraud-service'
 
