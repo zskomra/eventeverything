@@ -3,10 +3,12 @@ server:
 spring:
   application:
     name: registration-service
+
   datasource:
     password: admin
     url: jdbc:postgresql://localhost:5432/registration
     username: admin
+
   jpa:
     hibernate:
       ddl-auto: create-drop
@@ -15,3 +17,15 @@ spring:
         dialect: org.hibernate.dialect.PostgreSQLDialect
         format_sql: true
     show-sql: true
+
+  cloud:
+    config:
+      enabled: false
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+    #      true by default:
+    fetch-registry: true
+    register-with-eureka: true
